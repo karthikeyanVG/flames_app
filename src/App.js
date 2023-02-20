@@ -82,38 +82,39 @@ function App() {
     let finalval = value % 6;
     return finalval;
   }
+
   return (
     <div>
-      <div className='flex flex-row'>
-        <div className='h-screen w-screen bg-custom-bg flex-col justify-center align-middle items-center flex '>
-          <img src={hero} className=' h-5/6 ' />
-          <div className='pt-10 text-custom-text'>
-            <h1 className=' font-semibold text-2xl'>Solluga Mama kutty !!</h1>
+      <div className='flex md:flex-row flex-col'>
+        <div className='h-full w-full bg-custom-bg flex-col justify-center align-middle items-center flex'>
+          <img src={hero} className='md:h-[34em] md:w-[34em] h-[20em] w-[20em]' />
+          <div className='sm:pt-10 pb-2 text-custom-text'>
+            <h1 className=' font-semibold text-2xl'>ILL THA KKA SAI YA</h1>
           </div>
         </div>
         {
           relationShip ? (
             <>
-              <div className='h-screen w-screen py-12 flex flex-col items-center mx-10 rounded overflow-hidden shadow-lg"'>
-                <p className='text-2xl font-medium'>{relationShip}</p>
+              <div className='h-full w-full pt-5 flex flex-col items-center sm:mx-10 rounded overflow-hidden shadow-lg"'>
+                <p className='sm:text-2xl text-xl font-medium'>{relationShip}</p>
                 <img src={relationImage} className='' />
               </div>
             </>
           ) : (
-            <div className='h-screen w-screen py-20 flex flex-col items-center rounded overflow-hidden shadow-lg'>
-              <h1 className='font-bold text-4xl'>ILL THA KKA SAI YA</h1>
-              <div className='flex py-10 px-16 flex-col gap-4 mt-10 mb-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700' >
+            <div className='h-full w-full sm:my-10 p-4 flex flex-col items-center '>
+              <h1 className='font-bold md:text-4xl sm:text-2xl text-lg'> Solluga Mama kutty !!</h1>
+              <div className='flex sm:py-20 py-8 pt-6 sm:px-16 px-14 flex-col gap-4 sm:mt-10 mt-5 mb-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700' >
                 <h1 className=''>Your Name</h1>
-                <input className='p-1 rounded-md border-custom-bg border-2 w-60' placeholder='name'
+                <input className='p-1 rounded-md border-custom-bg border-2 w-65' placeholder='Name'
                   value={name}
                   onChange={(e) => changeYourName(e)}
                 />
                 <h1>Your Crush Name</h1>
-                <input className='p-1 rounded-md border-custom-bg border-2 w-60' placeholder='crush Name'
+                <input className='p-1 rounded-md border-custom-bg border-2 w-65' placeholder='Crush Name'
                   value={girlName}
                   onChange={(e) => changeYourGirlName(e)}
                 />
-              <button className='bg-custom-button px-5 py-2 rounded' onClick={onSubbmit}>subbmit</button>
+                <button className='bg-custom-button px-5 py-2 rounded mt-4' onClick={onSubbmit}>Find</button>
               </div>
             </div>
           )
